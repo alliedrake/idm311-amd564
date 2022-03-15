@@ -1,0 +1,179 @@
+* { 
+	box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Halken-Regular';
+    src: url('fonts/Halken-Regular.woff') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+html {
+    font-size: 100%;
+    background-color: #141d25;
+    color: #b3d3e7;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Halken-Regular';
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color:#f7ffe0;
+}
+
+p {
+    font-family: 'Roboto';
+    color: #f7f7f7;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+ul {
+    font-family: 'Roboto';
+    font-size: 1.3rem;
+    color: #f7f7f7;
+    line-height: 2rem;
+}
+
+a {
+    text-decoration: underline 2px #242c31;
+    font-weight: 800;
+}
+
+a:visited {
+    color: #242c31;
+}
+
+.header1 {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header h2 {
+    margin-top: -0.5rem;
+    padding-bottom: 2rem;
+}
+
+.lists {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.i-frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.herotwo {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/interface.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.section_one, .section_two, .section_three {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.header, .context_and_challenge, .process_and_insight, .solution {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.image {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.solution {
+    padding-bottom: 2rem;
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+
+    .header, .context_and_challenge, .process_and_insight, .solution {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .hero {
+        margin-top: -6rem;
+        margin-bottom: -6rem;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/hero.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+    }
+    
+    .herotwo {
+        margin-top: -6rem;
+        margin-bottom: -6rem;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/interface.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+    }
+
+    .image {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-left: -4rem;
+        margin-right: -4rem;
+    }
+
+}

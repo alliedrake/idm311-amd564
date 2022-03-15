@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Case Study | IDM 311</title>
+</head>
+<body>
+
+
+        <div class="header1">
+            <h1>IDM 200 Final Project Case Study</h1>
+            <h2>Allison Drake</h2>
+        </div>
+        <div class="hero">
+            <!--Image goes here in css-->
+        </div>
+
+
+
+        <div class="section_one">
+
+            <div class="header">
+                <h1>MY ROLE</h1>
+                <p>This was an individual project where used the resources that I learned weekly to build a 3D interactive world in Unity. I focused on making the interface usable and worked to make sure the interactions in the world made sense. I also acted as a coder in order to make the player function and trigger objects in this 3D space.</p>
+            </div>
+
+            <div class="context_and_challenge">
+                <h1>CONTEXT AND CHALLENGE</h1>
+                <h2>BACKGROUND</h2>
+                <p>In this case study I discuss my experience in my User Interface Design for Immersive Media class and the process behind my final project. This class introduced me to Unity and the best practices for user interface design when applied to AR/VR. I spent weeks completing pathways on Unity Learn and learning key essentials to build an interactive interface by the end of the course.</p>
+                <h2>GOALS</h2>
+            <ul>
+                <li>Understand the fundamentals of XR Interactive Engines</li>
+                <li>Design and develop an optimized UX interface for XR applications</li>
+                <li>Create a final project based on my working knowledge of Unity</li>
+            </ul>
+            </div>
+
+        </div>
+
+        <div class="herotwo">
+        </div>
+
+        <div class="section_two">
+
+            <div class="process_and_insight">
+                <h1>PROCESS AND INSIGHT</h1>
+                <h2>CHOOSING AN EVIRONMENT</h2>
+                <p>Most of the resources I found when prepping for my final were found in the Unity Asset Store for free. I made sure to choose an environment that wasn't too complex or large just to make sure the functionality was intact before I started adding dynamic components to it. I went for a nature themed 3D environment inspired by Minecraft and first added "walls" to the edges of the terrain to make sure my player wouldn't fall off by adding cube GameObjects with box colliders. I then turned their mesh renderers off to make the wall invisible.</p>
+                <!--Add image of teams and image of spreadsheet-->
+                <div class="image">
+                    <img style="width: 100%;" src="images/wall.png" alt="wall">
+                </div>
+                <h1>DEVELOPMENT</h1>
+                <h2>BUILDING THE UI</h2>
+                <p>I used what I learned about creating interfaces in a VR space from past lessons to build a menu system. I used the DIM method by changing the scale of the canvas so that the components on the menu would scale correctly if I were to move the menu farther away. I decided to place the menu on the side of the mountain compared to the past where I kept it in the center of the players view to make the environment more dynamic. From there I added a music toggle to control the music and it's volume, I added a flower toggle to turn on/off flowers in the environment, and built a script to toggle day/night in the environment as well.</p>
+                <div class="image">
+                    <img style="width: 100%;" src="images/menu.png" alt="wall">
+                </div>
+                <h2>IMPLEMENTING WASD</h2>
+                <p>I wanted to allow the player to be able to move around the environment, so this is where I started implementing C# scripts. I added a "PlayerBody" parent GameObject with the main camera and a cylinder as the children. The cylinder had the same position of the camera and had a collider to act as the player's body. I also added a script that wouldn't allow the camera to fall through the ground and added box colliders to the environment to prevent the camera floating through objects as well. After that I added a script to allow the camera to move around the enviroment using the keys WASD and a script that would allow the player to look around the environment.</p>
+                <div class="image">
+                    <img style="width: 100%;" src="images/playermovement.png" alt="wall">
+                </div>
+                <h2>INTERACTIVE OBJECTS</h2>
+                <p>The last step was adding at least 3 3D objects that dynamically changed the XR in my environment. I first had to add code to get raycast hit a GameObject and open my menu. When I first started working on this, the raycast wasn't recognizing
+                    the object that I wanted to trigger the menu system. After some debugging, I realized that my code was correct, because it worked in other Unity projects but not this one. I thought it could possibly be the environment I chose or the other objects I had
+                    in it that were affecting the code, so I created a duplicate enviroment and tested my scripts from there. For some reason, it worked, and I had enough time that I decided I would just continue to build from that new environment so I could really keep track of my steps.
+                </p>
+                <div class="image">
+                    <img style="width: 100%;" src="images/raycast.png" alt="wall">
+                </div>
+            </div>
+        </div>
+
+        <div class="section_three">
+
+            <div class="solution">
+                <h1>SOULTION</h1>
+                <p>I used the script from the raycast example to find ways to trigger other objects in the environment. I added a sound effect when the raycast hit the chickens and added rain when the raycast hit the pond. I also paired the chickens' movement with the WASD so that they would move when the player moves in the enviroment. A lot of this project consisted of finding resources outside of class to make these interactions functional as well as troubleshooting the scripts to achieve what I wanted to happen in the environment.</p>
+            </div>
+
+            <div class="solution">
+                <h1>RESULTS</h1>
+                <p>Overall, I found ways to solve problems in a game engine I was completely new to and learned new tricks along the way to make my process easier when it came to my final project. I was able to build a dynamic enviroment built for VR and learned the essentials to software that highly experienced professionals use. I learned that the interface gets easier to navigate as you play around with it and that there are a lot of possibilities within this game engine. I went out of my comfort zone by choosing to take this course and I'm very
+                    glad I was able to troubleshoot the issues that came along the way!
+                </p>
+            </div>
+
+            <div class="solution">
+                <h1>VIEW MY FINAL PROJECT HERE:</h1>
+            </div>
+            <div class="i-frame">
+                <iframe class="responsive-iframe" style="border:none;" src="../finalbuild/index.html"></iframe>
+            </div>
+
+        </div>
+
+
+</body>
+</html>
